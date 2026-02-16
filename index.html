@@ -5,39 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JARVIS CACHORA</title>
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-<h1>JARVIS CACHORA v1.1</h1>
+<h1>JARVIS CACHORA 2.0</h1>
 
 <div class="panel">
-  <textarea id="problema" placeholder="Describe el problema..."></textarea>
+<textarea id="problema" placeholder="Describe el problema con precisión..."></textarea>
 
-  <select id="emocion">
-    <option value="estable">Estable</option>
-    <option value="cansado">Cansado</option>
-    <option value="emocional">Emocional</option>
-    <option value="frustrado">Frustrado</option>
-  </select>
+<select id="emocion">
+<option value="estable">Estable</option>
+<option value="cansado">Cansado</option>
+<option value="emocional">Emocional</option>
+<option value="frustrado">Frustrado</option>
+</select>
 
-  <select id="dominio">
-    <option value="negocio">Negocio</option>
-    <option value="dinero">Dinero</option>
-    <option value="relacion">Relación</option>
-    <option value="aprendizaje">Aprendizaje</option>
-    <option value="legado">Legado</option>
-    <option value="fisico">Disciplina Física</option>
-  </select>
+<select id="dominio"></select>
 
-  <button onclick="analizar()">Analizar</button>
+<input type="text" id="nuevoDominio" placeholder="Agregar nuevo dominio">
+<button onclick="agregarDominio()">Agregar Dominio</button>
+
+<button onclick="analizar()">Analizar</button>
 </div>
 
 <div id="resultado" class="resultado"></div>
 
-<div class="panel">
-  <h3>Estado de Dominios</h3>
-  <div id="estadoDominios"></div>
-</div>
+<canvas id="grafica"></canvas>
 
 <script src="app.js"></script>
 
